@@ -16,24 +16,120 @@ public class Main {
         int menuChoise = scanner.nextInt();
         switch (menuChoise){
             case 1:
+                boolean flag  =true;
                 System.out.println("\n\n\nИгра началась!\n");
                 String[][] playground = cl.GetFiled();
 
+                while(flag){
+                    //1
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 1:");
+                    System.out.print("Введите значение 'Y':");
+                    int tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    int tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "X");
 
 
+                    //2
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 2:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "O");
+
+                    //3
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 1:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "X");
 
 
+                    //4
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 2:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "O");
 
+                    //5
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 1:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "X");
+                    cl.FinishSecurity(playground);
 
+                    //6
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 2:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "O");
+                    cl.FinishSecurity(playground);
 
-                cl.ShowPlayground(playground); //отображение поля
-                System.out.println("Игрок 1:");
-                System.out.print("Введите значение 'х':");
-                int tmp1 = scanner.nextInt();
-                System.out.print("Введите значение 'y':");
-                int tmp2 = scanner.nextInt();
+                    //7
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 1:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "X");
+                    cl.FinishSecurity(playground);
 
-                System.out.println(""+tmp1+tmp2);
+                    //8
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 2:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "О");
+                    cl.FinishSecurity(playground);
+
+                    //9
+                    cl.ShowPlayground(playground);
+                    System.out.println("Игрок 1:");
+                    System.out.print("Введите значение 'Y':");
+                    tmp1 = scanner.nextInt();
+                    System.out.print("Введите значение 'X':");
+                    tmp2 = scanner.nextInt();
+                    tmp1 -= 1;
+                    tmp2 -= 1;
+                    cl.SetMove(tmp1, tmp2, "X");
+                    cl.FinishSecurity(playground);
+                }
+
+                cl.ShowPlayground(playground);
+                System.out.println("Данная партия закончилась ничьей");
 
                 break;
             case 2:
