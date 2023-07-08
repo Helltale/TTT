@@ -8,8 +8,8 @@ public class Main {
             CoreLogic cl = new CoreLogic();
 
 
-            System.out.println("\nДобро пожаловать, данная игра является первой, которую я написал на Java!\n" +
-                    "Надеюсь вам она понравится. Для навигации вводите цифры в консоль.\n\nМеню:\n" +
+            System.out.println("\nКрестики Нолики\n" +
+                    "Для навигации введите цифру в консоль.\n\nМеню:\n" +
                     "1. Начать играть\n" +
                     "3. Как играть\n" +
                     "4. Об авторе\n" +
@@ -25,16 +25,38 @@ public class Main {
                         cl.UniversalMethodPlayer(flag);
                         cl.FinishSecurity(cl.GetFiled(), flag);
                     }
-
-                    cl.ShowPlayground(playground);
-                    System.out.println("Данная партия закончилась ничьей");
-
+                    if(flag){
+                        cl.ShowPlayground(playground);
+                        System.out.println("Партия закончилась");
+                    }else {
+                        cl.ShowPlayground(playground);
+                        System.out.println("Данная партия закончилась");
+                    }
+/*
+                    System.out.println("Продолжим играть?\nЧтобы вернуться в главное меню введите Y\n" +
+                            "Чтобы выйти введите N");
+                    String contChoise = scanner.nextLine();
+                    switch (contChoise){
+                        case "Y":
+                            System.out.print("\033[H\033[J");
+                            break;
+                        case "N":
+                            System.exit(0);
+                            break;
+                        default:
+                            System.out.println("Некорректный ввод значения");
+                            break;
+                    }
+*/
                     break;
                 case 2:
                     break;
                 case 3:
                     break;
                 case 4:
+                    System.out.println("Данное приложение было написано одним из первых на java,\n" +
+                            "если вам интересно увидеть больше моих работ то можете ознакомиться с \n" +
+                            "моим портфолио www.github.com/helltale");
                     break;
                 case 5:
                     System.exit(0);
